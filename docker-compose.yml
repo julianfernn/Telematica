@@ -6,7 +6,7 @@ services:
     container_name: container1
     volumes:
       - ./web/:/app
-    command: bash -c "apt update && apt install -y python3 python3-pip libmysqlclient-dev && pip install -r /Web/requirements.txt && python3 /app/web.py"
+    command: bash -c "apt update && apt install -y python3 python3-pip libmysqlclient-dev && pip install -r /app/requirements.txt && python3 /app/web.py"
     ports:
       - 8080:8080
     networks:
@@ -25,8 +25,8 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ./DataBase/database.sql:/docker-entrypoint-initdb.d/database.sql
-    command: --init-file /docker-entrypoint-initdb.d/database.sql
+      - ./baseDatos/init.sql:/docker-entrypoint-initdb.d/init.sql
+    command: --init-file /docker-entrypoint-initdb.d/init.sql
     networks:
       mynetwork:
         ipv4_address: 192.168.10.3
@@ -36,13 +36,12 @@ services:
     container_name: container3
     volumes:
       - ./api/:/app
-    command: bash -c "apt update && apt install -y python3 python3-pip libmysqlclient-dev && pip install -r  /Web/requirements.txt && python3 /app/api.py"
+    command: bash -c "apt update && apt install -y python3 python3-pip libmysqlclient-dev && pip install -r /app/requirements.txt && python3 /app/dashboard.py"
     ports:
       - 5600:5600
     networks:
       mynetwork:
         ipv4_address: 192.168.10.4
-
 
 networks:
   mynetwork:
@@ -50,4 +49,3 @@ networks:
       driver: default
       config:
         - subnet: 192.168.10.0/24
-  
