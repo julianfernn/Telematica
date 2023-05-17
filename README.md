@@ -14,7 +14,7 @@ Si está en un entorno de nube, habilite también el puerto 8080 y el puerto 560
 
 ![image](https://github.com/julianfernn/Telematica/assets/133823825/396870e5-7397-426b-8a24-e142635ef134)
 
-#ACTUALIZAR REPOSITORIOS!!
+#ACTUALIZAR REPOSITORIOS
 Este archivo actualizará el repositorio de paquetes e instalará docker compose junto con dos imágenes, mysql y ubuntu, finalmente, ejecutará el archivo docker-compose.yml, que creará tres contenedores.
 
  ****sudo sh ./inicio.sh****
