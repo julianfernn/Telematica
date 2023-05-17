@@ -61,9 +61,9 @@ def register():
 
 # Ruta para el dashboard
 ### Modificar si se corre dentro de un entorno de nube ###
-@app.route('/dashboard')
+@app.route('/api')
 def dashboard():
-    return redirect('http://localhost:5600/?password=123456')
+    return redirect('http://52.205.234.127:5600/?password=123456')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
