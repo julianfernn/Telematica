@@ -28,7 +28,7 @@ VALID_PASSWORD = "123456"
 def index():
     password = request.args.get('password')
     if password == VALID_PASSWORD:
-        return redirect('/dashboard')
+        return redirect('/api')
     else:
         return redirect("https://www.youtube.com/watch?v=mCdA4bJAGGk")
 
