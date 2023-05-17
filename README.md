@@ -17,6 +17,6 @@ Si está en un entorno de nube, habilite también el puerto 8080 y el puerto 560
 #ACTUALIZAR REPOSITORIOS
 Este archivo actualizará el repositorio de paquetes e instalará docker compose junto con dos imágenes, mysql y ubuntu, finalmente, ejecutará el archivo docker-compose.yml, que creará tres contenedores.
 
- ****sudo sh ./inicio.sh****
+ ****sudo sh ./Docker.sh****
 
  
