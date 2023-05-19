@@ -1,4 +1,0 @@
-pandas
-plotly==5.14.1
-dash
-flask
