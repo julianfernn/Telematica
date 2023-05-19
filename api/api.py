@@ -20,25 +20,25 @@ fig = go.Figure(go.Densitymapbox(lat=latr, lon=lonr, z=zr, radius=20, opacity=0.
 fig.update_layout(mapbox_style="stamen-terrain", mapbox_center_lon=-75.589, mapbox_center_lat=6.2429)
 fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
 
-server = Flask(_name_)
+server = Flask(__name__)
 
-VALID_PASSWORD = "123456"
+VALID_PASSWORD = "contrasena"
 
 @server.route('/')
 def index():
     password = request.args.get('password')
     if password == VALID_PASSWORD:
-        return redirect('/api')
+        return redirect('/dashboard')
     else:
-        return redirect("https://www.youtube.com/watch?v=mCdA4bJAGGk")
+        return redirect("https://www.upb.edu.co/es/home")
 
 
-app = dash.Dash(_name_, server=server, url_base_pathname='/dashboard/')
+app = dash.Dash(__name__, server=server, url_base_pathname='/dashboard/')
 
 app.layout = html.Div([
     html.H1("Mapa con niveles"),
     dcc.Graph(figure=fig),
 ])
 
-if _name_ == '_main_':
-    server.run(host='0.0.0.0', port=5600)
+if __name__ == '__main__':
+    server.run(host='0.0.0.0', port=5600)
