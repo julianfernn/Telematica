@@ -28,9 +28,9 @@ VALID_PASSWORD = "contrasena"
 def index():
     password = request.args.get('password')
     if password == VALID_PASSWORD:
-        return redirect('/dashboard')
+        return redirect('/api')
     else:
-        return redirect("https://www.upb.edu.co/es/home")
+        return redirect("http://siata.gov.co:8089/estacionesNivel/cf7bb09b4d7d859a2840e22c3f3a9a8039917cc3/")
 
 
 app = dash.Dash(__name__, server=server, url_base_pathname='/dashboard/')
