@@ -35,6 +35,7 @@ def index():
 
 app = dash.Dash(__name__, server=server, url_base_pathname='/dashboard/')
 
+
 app.layout = html.Div([
     html.H1("Mapa con niveles"),
     dcc.Graph(figure=fig),
