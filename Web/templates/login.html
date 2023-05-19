@@ -5,64 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <style>
-        body {
-            text-align: center;
-            background-color: #2c3e50;
-            font-family: Arial, sans-serif;
-        }
-        
-        h2 {
-            color: #fff;
-        }
-        
-        form {
-            margin: 20px auto;
-            width: 300px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-        }
-        
-        label {
-            display: block;
-            text-align: left;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            margin-bottom: 15px;
-        }
-        
-        input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #34495e;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        
-        input[type="submit"]:hover {
-            background-color: #2c3e50;
-        }
-    </style>
 </head>
 <body>
     <h2>Login Form</h2>
-    <form action="/login" method="POST">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username"><br>
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password"><br><br>
-        <input type="submit" value="Submit">
-    </form>
+	<form action="/login" method="POST">
+		<label for="username">Username:</label><br>
+		<input type="text" id="username" name="username"><br>
+		<label for="password">Password:</label><br>
+		<input type="password" id="password" name="password"><br><br>
+		<input type="submit" value="Submit">
+	</form>
 </body>
 </html>
-
