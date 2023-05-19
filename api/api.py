@@ -37,7 +37,7 @@ app = dash.Dash(__name__, server=server, url_base_pathname='/dashboard/')
 
 
 app.layout = html.Div([
-    html.H1("Mapa con niveles"),
+    html.H1("Mapa con sensores del nivel del agua en Medellín"),
     dcc.Graph(figure=fig),
 ])
 
