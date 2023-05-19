@@ -8,7 +8,7 @@ services:
       - ./web/:/app
     command: bash -c "apt update && apt install -y python3 python3-pip libmysqlclient-dev && pip install -r /app/requirements.txt && python3 /app/web.py"
     ports:
-      - 8080:8080
+      - 80:80
     networks:
       mynetwork:
         ipv4_address: 192.168.10.2
@@ -25,8 +25,8 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ./database/Datos.sql:/docker-entrypoint-initdb.d/datos.sql
-    command: --init-file /docker-entrypoint-initdb.d/datos.sql
+      - ./database/Datos.sql:/docker-entrypoint-initdb.d/Datos.sql
+    command: --init-file /docker-entrypoint-initdb.d/Datos.sql
     networks:
       mynetwork:
         ipv4_address: 192.168.10.3
@@ -41,7 +41,9 @@ services:
       - 5600:5600
     networks:
       mynetwork:
-        ipv4_address: 192.168.10.4
+        ipv4_address: 192.168.10.4      
+
+  
 
 networks:
   mynetwork:
